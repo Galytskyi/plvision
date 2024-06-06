@@ -1,0 +1,19 @@
+
+CC = gcc
+OBJ = main.o func.o
+DEPS = header.h
+
+main_print: $(OBJ)
+	$(CC) -o $@ $^
+
+
+main_print.o: main.c $(DEPS)
+	$(CC) -c $^
+
+
+func_print.o: func.c $(DEPS)
+	$(CC) -c $^
+
+
+clean:
+	rm -rf *.o main

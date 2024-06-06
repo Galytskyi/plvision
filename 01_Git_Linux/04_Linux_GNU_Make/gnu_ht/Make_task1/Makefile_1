@@ -1,0 +1,5 @@
+all: main
+
+main: main.c
+
+	gcc -o main main.c src1.c header.h

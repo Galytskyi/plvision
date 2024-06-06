@@ -1,0 +1,21 @@
+CC = gcc
+SRC_MAIN = main.c
+SRC_ADD = src1.c header.h
+
+
+all: main
+
+main: src1.o main.o 
+
+	$(CC) -o main $^
+
+main.o: $(SRC_MAIN)
+
+	$(CC) -c $<
+
+src1.o: $(SRC_ADD)
+
+	$(CC) -c $(SRC_ADD)
+
+clean:
+	rm *.o main

@@ -1,0 +1,16 @@
+all: main
+
+main: src1.o main.o 
+
+	gcc -o main main.o src1.o
+
+main.o: main.c
+
+	gcc -c main.c
+
+src1.o: src1.c
+
+	gcc -c src1.c header.h
+
+clean:
+	rm *.o main

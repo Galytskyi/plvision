@@ -1,0 +1,15 @@
+FROM alpine:latest
+
+LABEL img=Client
+LABEL dev=Sergii
+
+RUN apk update
+
+RUN touch /opt/send_msg.txt && echo "data msg!"  >> /opt/send_msg.txt
+
+COPY client.sh /opt/client.sh
+RUN chmod +x /opt/client.sh
+
+ENTRYPOINT ["sh", "/opt/client.sh"]
+#CMD ["echo", "--- Client docker ---"]
+
