@@ -1,3 +1,7 @@
+##########################################
+#
+# https://github.com/Galytskyi/plvision/tree/master/01_Git_Linux
+#
 ########################################## 
 
 classic@Steel:~/plvision$ mkdir lnx_hw_1 && cd lnx_hw_1
